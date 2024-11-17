@@ -46,7 +46,8 @@ ai-agent-project-1/
 │
 ├── dashboard/                  # Streamlit dashboard application
 │   └── app.py                  # Main application file for the dashboard
-│
+│   └── .env                        # API keys and environment variables
+│   └── requirements.txt            # Project dependencies
 ├── scrapers/                   # Web scraping functionality
 │   └── web_search.py           # Scraping functionality for web search
 │
@@ -58,7 +59,6 @@ ai-agent-project-1/
 │
 ├── venv/                       # Virtual environment for dependency isolation
 │
-├── .env                        # API keys and environment variables
 ├── README.md                   # Project overview and setup instructions
 ├── requirements.txt            # Project dependencies
 └── __init__.py                 # Initialization for the project
