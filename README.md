@@ -102,7 +102,61 @@ To install the project locally, follow these steps:
 
 ---
 
-## Usage
+## **Service Account Setup**
+
+This project interacts with Google APIs (like Google Sheets) using a service account. You need to create a service account in your Google Cloud project and configure the project to use the credentials file.
+
+### **Steps to Set Up a Service Account:**
+
+1. **Create a Service Account** in the [Google Cloud Console](https://console.cloud.google.com/).
+    - Navigate to **IAM & Admin > Service Accounts**.
+    - Click **Create Service Account**, provide a name, and assign the necessary roles (like **Editor** or custom roles depending on your needs).
+    - Click **Done**.
+
+2. **Generate and Download the Service Account Credentials**:
+    - After creating the service account, generate the JSON key file. This file contains the private key and other details necessary for authentication.
+    - Download this JSON file and save it in a secure location.
+
+### **Configuring the Project with Service Account Credentials**
+
+Once you have the service account credentials JSON file, follow these steps:
+
+1. **Store the Credentials File** securely and **do not commit it to version control** (e.g., GitHub). Add the file path to your `.gitignore` file to ensure it isn't accidentally uploaded.
+
+2. **Set the `GOOGLE_APPLICATION_CREDENTIALS` Environment Variable** to the path of your credentials file:
+    - **For Windows:**
+      ```bash
+      set GOOGLE_APPLICATION_CREDENTIALS="path\to\your\service_account.json"
+      ```
+    - **For macOS/Linux:**
+      ```bash
+      export GOOGLE_APPLICATION_CREDENTIALS="path/to/your/service_account.json"
+      ```
+
+3. The project will use these credentials to authenticate and interact with Google Sheets or other Google services.
+
+### **Important Notes:**
+- Ensure that the service account has the necessary permissions to access the resources you intend to use (e.g., Google Sheets, Google Drive).
+- For security reasons, **never share your service account JSON file publicly**.
+
+### Example of Service Account JSON Structure (Do not use this exact content):
+```json
+{
+  "type": "service_account",
+  "project_id": "your-project-id",
+  "private_key_id": "your-private-key-id",
+  "private_key": "your-private-key",
+  "client_email": "your-service-account-email",
+  "client_id": "your-client-id",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "your-cert-url"
+}
+```
+
+## **Usage**
+
 Once the project is installed, follow these steps to run the application:
 
 1. Run the Streamlit app:
@@ -114,10 +168,10 @@ Once the project is installed, follow these steps to run the application:
    This will start the Streamlit application in your web browser.
 
 ### Dashboard Features:
-- Upload CSV or Google Sheets: Upload your dataset in CSV format or connect to Google Sheets for data processing.
-- Define Search Column: Select the column with entities (e.g., company names) that you want to search for.
-- Enter Custom Queries: Input custom search prompts for tailored information retrieval.
-- View and Download Results: View the extracted data directly in the dashboard and export it as a CSV file.
+- **Upload CSV or Google Sheets**: Upload your dataset in CSV format or connect to Google Sheets for data processing.
+- **Define Search Column**: Select the column with entities (e.g., company names) that you want to search for.
+- **Enter Custom Queries**: Input custom search prompts for tailored information retrieval.
+- **View and Download Results**: View the extracted data directly in the dashboard and export it as a CSV file.
 
 ---
 
@@ -134,8 +188,8 @@ Make sure to keep these API keys private and secure.
 ---
 
 ## Optional Features
-- Google Sheets Integration**: You can connect to Google Sheets by setting up your service account credentials and ensuring the correct configuration.
-- Advanced Search Options**: You can extend the search functionality with multiple queries or additional filtering options to narrow down results.
+- **Google Sheets Integration**: You can connect to Google Sheets by setting up your service account credentials and ensuring the correct configuration.
+- **Advanced Search Options**: You can extend the search functionality with multiple queries or additional filtering options to narrow down results.
 
 ---
 
@@ -169,7 +223,6 @@ A brief Loom video has been provided, explaining the following:
 This project is licensed under the MIT License - see the LICENSE file for details.
 ```
 
-### Explanation of the Structure:
-1. All Sections Combined: The **Project Overview**, **Features**, **Installation**, **Usage**, **API Keys and Environment Variables**, **Optional Features**, **Dependencies**, **Loom Video Walkthrough**, and License sections are all included together in a continuous, cohesive layout.
-2. Formatting: The use of `#` for headings, bold text, and code blocks (` ```bash ... ````) ensures that the document is professional and readable in GitHub's markdown renderer.
-3. Usage Instructions: The installation and usage instructions are complete, ensuring that users can easily get started.
+### Adjustments Made:
+- I corrected the **Usage** section’s formatting issue.
+- The document maintains proper Markdown syntax to ensure that everything is correctly formatted, especially the headings and code blocks.
