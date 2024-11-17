@@ -60,7 +60,6 @@ ai-agent-project-1/
 ├── venv/                       # Virtual environment for dependency isolation
 │
 ├── README.md                   # Project overview and setup instructions
-├── requirements.txt            # Project dependencies
 └── __init__.py                 # Initialization for the project
 ```
 
