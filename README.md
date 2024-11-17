@@ -215,6 +215,7 @@ A brief Loom video has been provided, explaining the following:
 - The overall purpose and capabilities of the project.
 - A walkthrough of the Streamlit dashboard and its key features.
 - Explanation of important code implementations and challenges faced.
+- link: "https://www.loom.com/share/3b74be3c98f04ccf811ad3688b97a188?sid=30c18683-8924-4e72-98bf-ed86a8572fad"
 
 ---
 
