@@ -222,7 +222,3 @@ A brief Loom video has been provided, explaining the following:
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
 ```
-
-### Adjustments Made:
-- I corrected the **Usage** section’s formatting issue.
-- The document maintains proper Markdown syntax to ensure that everything is correctly formatted, especially the headings and code blocks.
